@@ -8,10 +8,10 @@ import { RhinoCompute } from 'https://cdn.jsdelivr.net/npm/compute-rhino3d@0.13.
 const definitionName = 'rnd_node.gh'
 
 // listen for slider change events
-const count_slider = document.getElementById( 'count' )
-count_slider.addEventListener( 'input', onSliderChange, false )
 const radius_slider = document.getElementById( 'radius' )
 radius_slider.addEventListener( 'input', onSliderChange, false )
+const height_slider = document.getElementById( 'height' )
+height_slider.addEventListener( 'input', onSliderChange, false )
 
 const downloadButton = document.getElementById("downloadButton")
 downloadButton.onclick = download
@@ -49,14 +49,15 @@ async function compute() {
     // collect data
 
     // get slider values
-    let count = document.getElementById('count').valueAsNumber
     let radius = document.getElementById('radius').valueAsNumber
+    let height = document.getElementById('height').valueAsNumber
+    
 
     // format data
     let param1 = new RhinoCompute.Grasshopper.DataTree('RH_IN:radius')
     param1.append([0], [radius])
-    let param2 = new RhinoCompute.Grasshopper.DataTree('RH_IN:count')
-    param2.append([0], [count])
+    let param2 = new RhinoCompute.Grasshopper.DataTree('RH_IN:height')
+    param2.append([0], [height])
 
     // Add all params to an array
     let trees = []

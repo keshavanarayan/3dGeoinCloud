@@ -8,7 +8,7 @@
 		<style>
 			body { 
                 margin: 0;
-                font-family: sans-serif;
+                font-family: monospace;
             }
 
             input { width: 80%; }
@@ -35,22 +35,13 @@
 	</head>
 	<body>
         <div id="loader"></div>
-       
         <div>
-            <input type="range" id="radius" name="radius" min="20" max="100" value="5" step="1">
-            <label for="radius">radius</label>
+            <input type="range" id="radius" name="radius" min="2" max="20" value="5" step="1">
+            <label for="Radius">count</label>
         </div>
         <div>
-            <input type="range" id="distance" name="distance" min="2" max="20" value="5" step="1">
-            <label for="count">count</label>
-        </div>
-        <div>
-            <input type="range" id="seed" name="seed" min="0" max="10" value="5" step="1">
-            <label for="count">count</label>
-        </div>
-        <div>
-            <input type="range" id="item to fabricate" name="item to fabricate" min="0" max="25" value="5" step="1">
-            <label for="count">count</label>
+            <input type="range" id="height" name="height" min="5" max="20" value="5" step="1">
+            <label for="height">radius</label>
         </div>
         <button id="downloadButton" disabled>Download</button>
         <script type="module" src="./script.js"></script>
