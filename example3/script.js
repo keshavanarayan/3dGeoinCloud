@@ -166,7 +166,11 @@ function init() {
     scene = new THREE.Scene()
     scene.background = new THREE.Color(1, 1, 1)
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
-    camera.position.z = - 30
+    camera.position.z = +4
+    camera.position.y = -15
+
+
+    
 
     // create the renderer and add it to the html
     renderer = new THREE.WebGLRenderer({ antialias: true })
@@ -177,8 +181,8 @@ function init() {
     const controls = new OrbitControls(camera, renderer.domElement)
 
     // add a directional light
-    const directionalLight = new THREE.DirectionalLight( 0xffffff )
-    directionalLight.intensity = 2
+    const directionalLight = new THREE.DirectionalLight( 0x000000 )
+    directionalLight.intensity = 10
     scene.add( directionalLight )
 
     const ambientLight = new THREE.AmbientLight()

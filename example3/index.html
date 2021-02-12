@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="data:;base64,=">
-		<title>S1 - Lecture 3 - Example 2</title>
+		<title>Voronoi Table</title>
 		<style>
 			body { 
                 margin: 0;
@@ -14,7 +14,24 @@
             input { width: 80%; }
 
 			/* CSS for a spinning animation */ 
-			#loader {
+			
+
+            div.center {
+            text-align: center;
+            font-size: 20px;
+            font-family: monospace;
+            border: 3px solid rgb(0, 0, 0);
+            style= "color:rgb(104,104,104)"
+            }
+
+            div.centersmall {
+            text-align: center;
+            font-size: 15px;
+            font-family: monospace;
+            style= "color:rgb(104,104,104)"
+            }
+
+            #loader {
                 border: 5px solid #f3f3f3; /* Light grey */
                 border-top: 5px solid #3d3d3d; /* Grey */
                 border-radius: 50%;
@@ -37,12 +54,23 @@
         <div id="loader"></div>
         <div>
             <input type="range" id="radius" name="radius" min="2" max="20" value="5" step="1">
-            <label for="Radius">count</label>
+            <label for="Radius">Radius</label>
         </div>
         <div>
             <input type="range" id="height" name="height" min="5" max="20" value="5" step="1">
-            <label for="height">radius</label>
+            <label for="height">Height</label>
         </div>
+
+        
+       
+        <div class="center">
+            <p>The Voronoi Table</p>
+          </div>
+        
+        <div class="centersmall">
+            <p>Design your own Voronoi Table by steeing the required radius and the height of the table. All dimensions in m. </p>
+          </div>
+            
         <button id="downloadButton" disabled>Download</button>
         <script type="module" src="./script.js"></script>
 	</body>
